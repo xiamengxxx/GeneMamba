@@ -403,7 +403,7 @@ class EncoderLayer(nn.Module):
     def forward(self, X):
         # ssm forward pass + residual connection
         output = self.mamba(X) + X
-        return X
+        return output
 
 class mamba_mixer(nn.Module):
     """
